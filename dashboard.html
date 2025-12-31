@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Women Safety App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Dashboard</h1>
+    <button onclick="sendSOS()">🚨 SOS</button>
+    <p id="status"></p>
+    <p id="status" style="color:red; font-weight:bold;"></p>
+    <button onclick="logout()">Logout</button>
+    <div id="map"></div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr5UBKWGhj0CQilxiq7QuWyzwRHNywhEA"></script>
+<script src="app.js"></script>
+</body>
+</html>
