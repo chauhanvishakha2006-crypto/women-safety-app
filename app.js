@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyA_yV8_5Ihna9fqUTH2jGOOzes4oILOPuM",
+ const API_KEY = "YOUR_API_KEY_HERE";
   authDomain: "womensafetyapp-1c08a.firebaseapp.com",
   databaseURL: "https://womensafetyapp-1c08a-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "womensafetyapp-1c08a"
@@ -68,3 +68,4 @@ function logout() {
     window.location = "index.html";
   });
 }
+
