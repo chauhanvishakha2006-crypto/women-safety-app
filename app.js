@@ -1,5 +1,5 @@
 const firebaseConfig = {
- const API_KEY = "YOUR_API_KEY_HERE";
+  apiKey: "AIzaSyA_yV8_5Ihna9fqUTH2jGOOzes4oILOPuM",
   authDomain: "womensafetyapp-1c08a.firebaseapp.com",
   databaseURL: "https://womensafetyapp-1c08a-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "womensafetyapp-1c08a"
@@ -9,21 +9,27 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 const db = firebase.database();
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 function register() {
-  auth.createUserWithEmailAndPassword(
-    email.value, password.value
-  ).then(() => {
-    alert("Registered Successfully");
-    window.location = "dashboard.html";
-  });
+  auth.createUserWithEmailAndPassword(email.value, password.value)
+    .then(() => {
+      alert("Registered Successfully");
+      window.location = "dashboard.html";
+    })
+    .catch(error => {
+      alert(error.message);
+    });
 }
 
 function login() {
-  auth.signInWithEmailAndPassword(
-    email.value, password.value
-  ).then(() => {
-    window.location = "dashboard.html";
-  });
+  auth.signInWithEmailAndPassword(email.value, password.value)
+    .then(() => {
+      window.location = "dashboard.html";
+    })
+    .catch(error => {
+      alert(error.message);
+    });
 }
 
 function sendSOS() {
@@ -68,4 +74,3 @@ function logout() {
     window.location = "index.html";
   });
 }
-
